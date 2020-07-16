@@ -16,7 +16,7 @@ function Rectangulo ()
 	largoTerreno = parseFloat(largoTerreno);
 	anchoTerreno = parseFloat(anchoTerreno);
 
-	cantidadTotalAlambre = ((largoTerreno + largoTerreno) + (anchoTerreno + anchoTerreno )) * 3;
+	cantidadTotalAlambre = ((largoTerreno * 2) + (anchoTerreno * 2)) * 3;
 
 	alert("La cantidad de alambre necesaria será " + cantidadTotalAlambre + " metro/s.");
 
@@ -30,9 +30,9 @@ function Circulo ()
 
 	radioTerreno = parseFloat(radioTerreno);
 
-	cantidadTotalAlambre = (2 * 3,14 * radioTerreno) * 3;
+	cantidadTotalAlambre = (2 * Math.PI * radioTerreno) * 3;
 
-	alert("La cantidad de alambre necesaria será " + cantidadTotalAlambre + " metro/s");
+	alert("La cantidad de alambre necesaria será " + cantidadTotalAlambre.ToFixed(2) + " metro/s");
 	
 }
 
@@ -53,8 +53,8 @@ function Materiales ()
 
 	sumaMedidasTerreno = largoTerreno * anchoTerreno; 
 
-	bolsasCemento = sumaMedidasTerreno * (2/1);
-	bolsasCal = sumaMedidasTerreno * (3/1);
+	bolsasCemento = sumaMedidasTerreno * (2);
+	bolsasCal = sumaMedidasTerreno * (3);
 
 	alert("Se necesitarian " + bolsasCemento + " bolsas de cemento y " + bolsasCal + " bolsas de cal");
 
